@@ -1,103 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophy Zone</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #00f;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #00f;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #0ff;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #fff;
-        }
-        nav {
-            background-color: #00f;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            color: #0ff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 20px;
-        }
-        nav a:hover {
-            color: #fff;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #00f;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .post {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Philosophy Zone</h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Posts</a>
-        <a href="#">Contact</a>
-    </nav>
-    <main>
-        <h2>Welcome to the Philosophy Zone!</h2>
-        <p>Explore the depths of human thought and existentialism.</p>
-        <h3>Latest Posts</h3>
-        <div id="posts">
-            <!-- Posts will be dynamically added here -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Philosophy Zone. All rights reserved.</p>
-    </footer>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Philosophy Zone</title> <style> body { font-family: Arial, sans-serif; background-color: #fff; color: #00f; margin: 0; padding: 0; overflow-x: hidden; } header { background-color: #00f; padding: 20px; text-align: center; border-bottom: 2px solid #0ff; } h1 { margin: 0; font-size: 36px; color: #fff; } nav { background-color: #00f; padding: 10px 0; text-align: center; } nav a { color: #0ff; text-decoration: none; margin: 0 10px; font-size: 20px; } nav a:hover { color: #fff; } main { padding: 20px; } footer { background-color: #00f; padding: 10px 0; text-align: center; position: fixed; bottom: 0; width: 100%; } .post { margin-bottom: 20px; } </style> </head> <body> <header> <h1>Philosophy Zone</h1> </header> <nav> <a href="#">Home</a> <a href="#">About</a> <a href="#">Posts</a> <a href="#">Contact</a> </nav> <main> <h2>Welcome to the Philosophy Zone!</h2> <p>Explore the depths of human thought and existentialism.</p> <h3>Latest Posts</h3> <div id="posts"> <!-- Posts will be dynamically added here --> </div> </main> <footer> <p>© 2024 Philosophy Zone. All rights reserved.</p> </footer>
 
-    <script>
-        // Simulate dynamic loading of blog posts
-        document.addEventListener("DOMContentLoaded", function() {
-            const posts = document.getElementById('posts');
-            const samplePosts = [
-                { title: 'The Meaning of Life', date: 'May 1, 2024', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                { title: 'The Nature of Reality', date: 'April 25, 2024', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                { title: 'Exploring Existentialism', date: 'April 18, 2024', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
-            ];
+<script>
+    // Simulate dynamic loading of blog posts
+    document.addEventListener("DOMContentLoaded", function() {
+        const posts = document.getElementById('posts');
+        const samplePosts = [
+            { title: 'The Meaning of Life', date: 'May 1, 2024', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+            { title: 'The Nature of Reality', date: 'April 25, 2024', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+            { title: 'Exploring Existentialism', date: 'April 18, 2024', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
+        ];
 
-            samplePosts.forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.classList.add('post');
-                postElement.innerHTML = `
-                    <h4>${post.title}</h4>
-                    <p><em>${post.date}</em></p>
-                    <p>${post.content}</p>
-                    <hr>
-                `;
-                posts.appendChild(postElement);
-            });
+        samplePosts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `
+                <h4>${post.title}</h4>
+                <p><em>${post.date}</em></p>
+                <p>${post.content}</p>
+                <hr>
+            `;
+            posts.appendChild(postElement);
         });
-    </script>
-</body>
-</html>
+    });
+</script>
+
+</body> </html>
