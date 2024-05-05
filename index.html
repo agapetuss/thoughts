@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackZone Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0f0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #111;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #0f0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #111;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HackZone Blog</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Posts</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <h2>Welcome to the HackZone Blog!</h2>
+        <p>Stay tuned for the latest hacking techniques, cybersecurity news, and more.</p>
+        <h3>Latest Posts</h3>
+        <div id="posts">
+            <!-- Posts will be dynamically added here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 HackZone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simulate dynamic loading of blog posts
+        document.addEventListener("DOMContentLoaded", function() {
+            const posts = document.getElementById('posts');
+            const samplePosts = [
+                { title: 'How to Crack Passwords in 3 Easy Steps', date: 'May 1, 2024', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                { title: 'Advanced SQL Injection Techniques', date: 'April 25, 2024', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+                { title: 'Introduction to Ethical Hacking', date: 'April 18, 2024', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
+            ];
+
+            samplePosts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.innerHTML = `
+                    <h4>${post.title}</h4>
+                    <p><em>${post.date}</em></p>
+                    <p>${post.content}</p>
+                    <hr>
+                `;
+                posts.appendChild(postElement);
+            });
+        });
+    </script>
+</body>
+</html>
